@@ -1,6 +1,6 @@
 <?php
 /**
- * Template part for displaying posts
+ * Template part for displaying page content in page.php
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
@@ -11,6 +11,7 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<header class="entry-header">
+		
 		<?php
 		if ( is_singular() ) :
 			the_title( '<h3 class="entry-title">', '</h3>' );
@@ -34,7 +35,7 @@
 				<!-- post-details -->
 		<?php endif; ?>
 	</header><!-- .entry-header -->
-	
+
 	<?php if (has_post_thumbnail()) { ?>
 		<div class="post-image">
 			<?php the_post_thumbnail(); ?>
@@ -42,8 +43,8 @@
 			<!-- post-image -->
 	<?php } ?>
 	
-	<div class="post-excerpt">
-		<?php the_excerpt(); ?>
+	<div class="post-body">
+		<?php the_content(); ?>
 	</div>
 		<!-- post-excerpt -->
 </article><!-- #post-<?php the_ID(); ?> -->
