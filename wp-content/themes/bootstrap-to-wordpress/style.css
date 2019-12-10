@@ -74,6 +74,12 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 /*--------------------------------------------------------------
 ## Menus
 --------------------------------------------------------------*/
+.navbar-nav > li.current_page_item a,
+.navbar-nav > li.current_page_parent a {
+    color: white;
+    font-weight: bold;
+}
+
 
 /* Small menu. */
 .menu-toggle,
@@ -424,6 +430,7 @@ h1 {
     font-size: 3em;
 }
 
+
 h1,
 h2 {
     margin: 0 0 40px;
@@ -657,8 +664,9 @@ section h3 {
     background-size: cover;
 }
 
-.feature-image h1 {
-    display: table-cell;
+.feature-image h1,
+.feature-image .archive-description {
+    display: table-row;
     vertical-align: middle;
     text-align: center;
     color: white;
